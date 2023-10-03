@@ -7,6 +7,7 @@
     "dev": "npm-run-all --parallel vite tailwind",
     "vite": "vite",
     "tailwind": "npx tailwindcss -i ./style.css -o ./dist/output.css --watch",
+    "buildCss": "npx tailwindcss -i ./style.css -o ./dist/output.css",
     "build": "vite build",
     "preview": "vite preview"
   },
