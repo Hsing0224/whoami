@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "npm-run-all --parallel vite tailwind",
     "vite": "vite",
-    "tailwind": "npx tailwindcss -i ./style.css -o ./dist/output.css --watch",
-    "buildCss": "npx tailwindcss -i ./style.css -o ./dist/output.css",
-    "build": "vite build",
+    "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --watch",
+    "buildCss": "npx tailwindcss -i ./src/index.css -o ./dist/index.css",
+    "build": "npm-run-all --parallel buildVite buildCss",
+    "buildVite": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
