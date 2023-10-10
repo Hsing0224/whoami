@@ -3,11 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     
     <title>Who am i</title>
-    <link rel="stylesheet" href="./assets/index-cd666e32.css">
+    <link rel="stylesheet" href="./assets/index-d6d92bf0.css">
   </head>
-  <body class="flex h-screen justify-center items-center bg-stone-700">
-    <h1 class="text-cyan-500 text-5xl">Test1</h1>
+  <body>
+    <div class="min-h-screen flex justify-center items-start pt-14 pb-14 font-body bg-body-bg">
+      <div class="pokeCard relative p-7 flex-shrink-0 w-[400px]">
+        <div class="relative">
+          <img id="maskImg" class="transition-opacity" src="https://placebear.com/400/480" alt="">
+          <img id="showImg" class="absolute left-0 top-0 z-10 opacity-0 transition-opacity" src="https://placehold.co/400x480" alt="">
+        </div>
+      </div>
+      <div class="w-40 ml-24 pt-5">
+        <div class="text-name text-center leading-normal font-bold tracking-[5px]">
+          <div id="question" class="mb-5 text-6xl font-roboto relative before:absolute before:left-0 before:top-0 before:w-full before:h-full before:origin-right before:transition-transform before:duration-500 before:bg-body-bg">????</div>
+          <div class="relative text-5xl">
+            <div id="whoami" class="transition-opacity opacity-0 duration-500">我是誰</div>
+            <div id="answer" class="absolute left-0 top-0 z-10 select-none pointer-events-none transition-opacity opacity-0 duration-500">陳亮嶼</div>
+          </div>
+        </div>
+        <button type="button" id="button" class="block w-24 mt-8 ml-auto mr-auto bg-[#4299e1] hover:bg-[#63b3ed] text-white py-2 px-4 border-b-4 border-[#2b6cb0] hover:border-[#4299e1] rounded">
+          讓我看看
+        </button>
+      </div>
+    </div>
+    <script src="./src/main.js"></script>
   </body>
 </html>
