@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .pokeCard {
+    background-image: linear-gradient(#5bb0e0, #5bb0e0), linear-gradient(black, black), linear-gradient(white, white), linear-gradient(black, black);
+    background-size: calc(100% - 56px) calc(100% - 56px), calc(100% - 48px) calc(100% - 48px), calc(100% - 36px) calc(100% - 36px), calc(100% - 29px) calc(100% - 29px);
+    @apply bg-center bg-no-repeat;
+  }
+
+  .pokeCard::before,
+  .pokeCard::after {
+    content: '';
+    background-image: url('/pokeball.png'), url('/pokeball.png');
+    background-size: 40px 40px;
+    @apply absolute left-0 w-full h-10 bg-no-repeat z-20 pointer-events-none;
+  }
+
+  .pokeCard::before {
+    @apply top-0;
+    background-position: 0 0, 100% 0;
+  }
+
+  .pokeCard::after {
+    @apply bottom-0;
+    background-position: 0 100%, 100% 100%;
+  }
+}
