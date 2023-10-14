@@ -1,6 +1,4 @@
 import audioSrc from './pokemon.mp3';
-
-// const backgroundMusic = document.getElementById('backgroundMusic');
 const maskImg = document.getElementById('maskImg');
 const showImg = document.getElementById('showImg');
 const title = document.getElementById('title');
@@ -9,8 +7,17 @@ const answer = document.getElementById('answer');
 const whoami = document.getElementById('whoami');
 const button = document.getElementById('button');
 
+
+const audio = document.createElement('audio');
+audio.id = 'backgroundMusic';
+audio.src = audioSrc;
+// audio.autoplay = true;
+document.body.appendChild(audio);
+
+const backgroundMusic = document.getElementById('backgroundMusic');
+
 function loadShow() {
-  // backgroundMusic.play();
+  backgroundMusic.play();
   setTimeout(() => {
     title.classList.add('before:scale-x-0');
   }, 3000);
@@ -37,9 +44,3 @@ button.addEventListener('click', () => {
   showWho();
   button.remove();
 });
-
-const audio = document.createElement('audio');
-audio.id = 'backgroundMusic';
-audio.src = audioSrc;
-audio.autoplay = true;
-document.body.appendChild(audio);
