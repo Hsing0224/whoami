@@ -10,26 +10,27 @@
     <title>Who am i</title>
   </head>
   <body>
-    <div class="min-h-screen flex justify-center items-start pt-14 pb-14 font-body bg-body-bg">
-      <div class="pokeCard relative p-7 flex-shrink-0 w-[400px]">
+    <div class="min-h-screen flex flex-col items-center md:flex-row md:justify-center md:items-start p-5 font-body bg-body-bg">
+      <div class="pokeCard relative p-7 flex-shrink-0 w-full max-w-xs md:max-w-[400px]">
         <div class="relative">
           <img id="maskImg" class="transition-opacity" src="https://placebear.com/400/480" alt="">
           <img id="showImg" class="absolute left-0 top-0 z-10 opacity-0 transition-opacity" src="https://placehold.co/400x480" alt="">
         </div>
       </div>
-      <div class="w-40 ml-24 pt-5">
+      <div class="w-full pt-5 md:w-40 md:ml-24">
         <div class="text-name text-center leading-normal font-bold tracking-[5px]">
-          <div id="question" class="mb-5 text-6xl font-roboto relative before:absolute before:left-0 before:top-0 before:w-full before:h-full before:origin-right before:transition-transform before:duration-500 before:bg-body-bg">????</div>
-          <div class="relative text-5xl">
-            <div id="whoami" class="transition-opacity opacity-0 duration-500">我是誰</div>
-            <div id="answer" class="absolute left-0 top-0 z-10 select-none pointer-events-none transition-opacity opacity-0 duration-500">陳亮嶼</div>
+          <div id="title" class="mb-5 relative before:absolute before:left-0 before:top-0 before:w-full before:h-full before:z-20 before:origin-right before:transition-transform before:duration-500 before:bg-body-bg">
+            <div id="question" class="text-6xl font-roboto transition-opacity duration-500">????</div>
+            <div id="answer" class="absolute left-0 top-0 z-10 w-full text-5xl select-none pointer-events-none transition-opacity opacity-0 duration-500">陳亮嶼</div>
           </div>
+          <div id="whoami" class="text-5xl transition-opacity opacity-0 duration-500">我是誰</div>
         </div>
-        <button type="button" id="button" class="block w-24 mt-8 ml-auto mr-auto bg-[#4299e1] hover:bg-[#63b3ed] text-white py-2 px-4 border-b-4 border-[#2b6cb0] hover:border-[#4299e1] rounded">
+        <button type="button" id="button" class="block w-24 mt-8 ml-auto mr-auto bg-[#4299e1] hover:bg-[#63b3ed] text-white py-2 px-4 border-b-4 border-[#2b6cb0] hover:border-[#4299e1] rounded transition-opacity opacity-0 duration-500">
           讓我看看
         </button>
       </div>
     </div>
+    <audio id="backgroundMusic" src="./public/pokemon.mp3"></audio>
     <script src="./src/main.js"></script>
   </body>
 </html>
