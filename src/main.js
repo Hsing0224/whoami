@@ -8,7 +8,7 @@ const whoami = document.getElementById('whoami');
 const button = document.getElementById('button');
 
 function loadShow() {
-  backgroundMusic.play();
+  // backgroundMusic.play();
   setTimeout(() => {
     title.classList.add('before:scale-x-0');
   }, 3000);
