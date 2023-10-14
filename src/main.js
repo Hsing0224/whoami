@@ -1,4 +1,6 @@
-const backgroundMusic = document.getElementById('backgroundMusic');
+import audioSrc from './pokemon.mp3';
+
+// const backgroundMusic = document.getElementById('backgroundMusic');
 const maskImg = document.getElementById('maskImg');
 const showImg = document.getElementById('showImg');
 const title = document.getElementById('title');
@@ -35,3 +37,9 @@ button.addEventListener('click', () => {
   showWho();
   button.remove();
 });
+
+const audio = document.createElement('audio');
+audio.id = 'backgroundMusic';
+audio.src = audioSrc;
+audio.autoplay = true;
+document.body.appendChild(audio);
