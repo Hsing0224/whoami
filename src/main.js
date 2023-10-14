@@ -11,13 +11,12 @@ const button = document.getElementById('button');
 const audio = document.createElement('audio');
 audio.id = 'backgroundMusic';
 audio.src = audioSrc;
-// audio.autoplay = true;
+audio.autoplay = true;
 document.body.appendChild(audio);
 
 const backgroundMusic = document.getElementById('backgroundMusic');
 
 function loadShow() {
-  backgroundMusic.play();
   setTimeout(() => {
     title.classList.add('before:scale-x-0');
   }, 3000);
@@ -42,5 +41,7 @@ window.addEventListener('load', () => {
 
 button.addEventListener('click', () => {
   showWho();
+  backgroundMusic.play();
+
   button.remove();
 });
